@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09051f">
+<title>শুভ জন্মদিন জিহান জয় শুভ | Happy Birthday</title>
+<style>
+:root{--gold:#ffe7a3;--pink:#ff72c6;--cyan:#6df7ff;--ink:#09051f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:#fff;font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif;background:radial-gradient(ellipse at 15% 15%,#44206c 0,transparent 36%),radial-gradient(ellipse at 85% 20%,#063e60 0,transparent 35%),radial-gradient(ellipse at 50% 100%,#401347 0,transparent 45%),#09051f}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.3;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#7cf7ff 1px,transparent 1.5px),radial-gradient(#ff80c8 1px,transparent 1.5px);background-size:83px 83px,127px 127px,173px 173px;background-position:0 0,30px 55px,70px 20px;animation:stars 18s linear infinite}
+@keyframes stars{to{background-position:83px 83px,157px 182px,243px 193px}}
+.wrap{width:min(920px,92%);margin:auto;padding:28px 0 54px;position:relative;z-index:1}
+.topline{display:flex;justify-content:center;align-items:center;gap:9px;color:#c7c7ff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase}
+.pill{border:1px solid #ffffff35;background:#ffffff0b;padding:8px 13px;border-radius:30px;backdrop-filter:blur(12px)}
+.hero{text-align:center;padding:34px 14px 24px}
+.crown{font-size:clamp(2.5rem,8vw,4.5rem);filter:drop-shadow(0 0 18px #ffd76b);animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(4deg)}}
+.kicker{color:var(--cyan);letter-spacing:4px;font-size:.8rem;font-weight:800;margin:12px 0}
+h1{font-size:clamp(2.2rem,8vw,5.3rem);line-height:1.08;margin:8px 0 12px;font-weight:950;letter-spacing:-1px;text-shadow:0 0 22px #ff72c666}
+h1 .bn{display:block;color:var(--gold);font-size:clamp(2rem,7vw,4.3rem);margin-top:12px;text-shadow:0 0 25px #ffcf6670}
+.subtitle{color:#dedaf7;max-width:610px;margin:18px auto 0;line-height:1.8;font-size:1.02rem}
+.stage{position:relative;margin:18px auto 25px;max-width:680px;padding:28px 20px 30px;border:1px solid #ffffff2b;border-radius:28px;background:linear-gradient(135deg,#ffffff12,#ffffff04);box-shadow:0 20px 80px #0005,inset 0 0 40px #a35aff0b;backdrop-filter:blur(16px);overflow:hidden}
+.stage:before{content:"";position:absolute;width:240px;height:240px;left:-110px;top:-130px;border-radius:50%;background:#ff70d533;filter:blur(25px)}
+.stage:after{content:"";position:absolute;width:220px;height:220px;right:-100px;bottom:-130px;border-radius:50%;background:#51edff22;filter:blur(25px)}
+.orbit{width:150px;height:150px;border:1px solid #ffe7a377;border-radius:50%;margin:0 auto 17px;display:grid;place-items:center;position:relative;box-shadow:0 0 35px #ffcf6630,inset 0 0 30px #ffcf6618}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed #7df7ff88;border-radius:50%;inset:-12px;animation:spin 18s linear infinite}
+.orbit:after{inset:12px;border-color:#ff72c699;animation-direction:reverse;animation-duration:12s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cake{font-size:4.2rem;filter:drop-shadow(0 0 14px #ff9aef);animation:cake 1.5s ease-in-out infinite}
+@keyframes cake{50%{transform:scale(1.08)}}
+.message{position:relative;z-index:1;min-height:88px;display:grid;place-items:center;text-align:center}
+.message h2{font-size:clamp(1.4rem,5vw,2.35rem);margin:0 0 8px;color:var(--gold)}
+.message p{margin:0;color:#e8e2ff;line-height:1.8;max-width:560px}
+.dots{display:flex;justify-content:center;gap:7px;margin:20px 0 18px;position:relative;z-index:1}
+.dot{height:6px;width:22px;border-radius:10px;background:#ffffff2e;transition:.3s}
+.dot.active{width:38px;background:linear-gradient(90deg,var(--pink),var(--gold));box-shadow:0 0 12px #ff72c688}
+.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;position:relative;z-index:1}
+button{font:inherit;font-weight:800;border:0;cursor:pointer;transition:transform .2s,filter .2s}
+button:hover{transform:translateY(-3px);filter:brightness(1.1)}
+button:active{transform:scale(.97)}
+.primary{padding:15px 24px;border-radius:16px;color:#24103b;background:linear-gradient(110deg,#ffe7a3,#ff8fd7 60%,#9cfaff);box-shadow:0 8px 28px #ff72c633}
+.secondary{padding:14px 20px;border:1px solid #ffffff3d;border-radius:16px;color:white;background:#ffffff0c}
+.trail{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+.mini{padding:18px 12px;text-align:center;border-radius:18px;border:1px solid #ffffff20;background:#ffffff08}
+.mini .emoji{font-size:1.7rem;display:block;margin-bottom:8px}
+.mini strong{display:block;color:#ffe7a3;font-size:.95rem}
+.mini small{display:block;color:#c9c3e7;line-height:1.5;margin-top:5px}
+.treat{margin-top:24px;padding:24px 20px;border-radius:24px;text-align:center;background:linear-gradient(130deg,#ff72c61a,#6df7ff12);border:1px solid #ffb8ed4a}
+.treat h3{margin:0 0 8px;font-size:clamp(1.4rem,4vw,2rem)}
+.treat p{margin:8px auto 18px;line-height:1.8;color:#e4def9;max-width:600px}
+.treat .primary{font-size:1rem}
+.footer{text-align:center;color:#a8a0ca;font-size:.8rem;padding:26px 8px 0}
+#toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff;color:#211039;border-radius:14px;padding:12px 18px;font-weight:800;box-shadow:0 8px 30px #0005;transition:.3s;z-index:20;text-align:center;width:max-content;max-width:90%}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.confetti{position:fixed;top:-20px;width:9px;height:14px;z-index:10;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(780deg);opacity:.2}}
+.glowline{height:1px;max-width:250px;margin:0 auto;background:linear-gradient(90deg,transparent,#ffe7a3,transparent)}
+@media(max-width:560px){.wrap{padding-top:18px}.hero{padding-top:26px}.stage{padding:24px 14px}.trail{grid-template-columns:1fr}.mini{display:flex;align-items:center;text-align:left;gap:12px;padding:13px 15px}.mini .emoji{margin:0}.mini small{margin-top:2px}.mini div{flex:1}.topline{letter-spacing:1px}.subtitle{font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="topline"><span class="pill">✨ SPECIAL DAY</span><span class="pill">🎂 BIRTHDAY EDITION</span></div>
+  <header class="hero">
+    <div class="crown">👑</div>
+    <div class="kicker">TODAY IS ALL ABOUT YOU</div>
+    <h1>HAPPY BIRTHDAY<span class="bn">জিহান জয় শুভ</span></h1>
+    <p class="subtitle">প্রিয় বড় ভাই, আপনার বিশেষ দিনটা হোক আনন্দ, ভালোবাসা আর অসংখ্য সুন্দর মুহূর্তে ভরা। আজকের দিনটা শুধু আপনার! 💫</p>
+  </header>
+
+  <section class="stage" aria-live="polite">
+    <div class="orbit"><div class="cake" id="cake">🎂</div></div>
+    <div class="message">
+      <div><h2 id="slideTitle">শুভ জন্মদিন, বড় ভাই! 🎉</h2><p id="slideText">আপনার জীবনের প্রতিটি নতুন দিন নিয়ে আসুক নতুন সাফল্য, শান্তি আর হাসি।</p></div>
+    </div>
+    <div class="dots" id="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="controls">
+      <button class="primary" id="nextBtn">✨ সারপ্রাইজ খুলুন</button>
+      <button class="secondary" id="soundBtn">🔊 Birthday Wish শুনুন</button>
+    </div>
+  </section>
+
+  <div class="glowline"></div>
+  <section class="trail">
+    <div class="mini"><span class="emoji">🌟</span><div><strong>Dream Big</strong><small>বড় স্বপ্ন দেখুন, ভাই!</small></div></div>
+    <div class="mini"><span class="emoji">🤍</span><div><strong>Stay Blessed</strong><small>আল্লাহ আপনাকে ভালো রাখুন।</small></div></div>
+    <div class="mini"><span class="emoji">🏆</span><div><strong>Keep Shining</strong><small>সাফল্যে ভরে উঠুক জীবন।</small></div></div>
+  </section>
+
+  <section class="treat">
+    <div style="font-size:2rem">🍕🍰🥤</div>
+    <h3>আচ্ছা ভাই… Birthday Treat কবে? 😏</h3>
+    <p>শুভেচ্ছা তো দিলাম, এবার ট্রিটের পালা! 😄<br>ভাই, ট্রিট কী দিবেন? আর <b>কখন ট্রিট দিবেন?</b> দিন-তারিখ জানিয়ে দিয়েন কিন্তু!</p>
+    <button class="primary" id="treatBtn">🍔 ট্রিটের তারিখ বলুন!</button>
+  </section>
+
+  <footer class="footer">Made with 💜 just for <b>জিহান জয় শুভ · Jihan Joy Shuvo</b><br>একটা ক্লিক, অনেকগুলো হাসি — Happy Birthday, ভাই! 🎊</footer>
+</main>
+<div id="toast" role="status"></div>
+<script>
+const slides = [
+  {title:"শুভ জন্মদিন, বড় ভাই! 🎉",text:"আপনার জীবনের প্রতিটি নতুন দিন নিয়ে আসুক নতুন সাফল্য, শান্তি আর হাসি।"},
+  {title:"Jihan Joy Shuvo ✨",text:"May your year be full of happiness, good health, great memories and beautiful surprises!"},
+  {title:"দোয়া রইল ভাই 🤲",text:"আল্লাহ আপনার জীবনকে বরকত, সুস্থতা, সম্মান ও হালাল রিজিকে পরিপূর্ণ করে দিন। আমিন।"},
+  {title:"আজকের Star আপনি! 🌟",text:"আজ মন খুলে হাসুন, প্রিয় মানুষদের সঙ্গে সময় কাটান, আর নিজের দিনটা দারুণভাবে উপভোগ করুন!"},
+  {title:"এবার আসল প্রশ্ন… 😎",text:"ভাই, জন্মদিন আপনার—কিন্তু ট্রিটের অপেক্ষায় তো আমরা! ট্রিট কী দিবেন, কখন দিবেন? 😂"}
+];
+let index=0, audioCtx=null;
+const title=document.getElementById('slideTitle'), body=document.getElementById('slideText');
+const dots=[...document.querySelectorAll('.dot')], toast=document.getElementById('toast');
+function popToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(popToast.timer);popToast.timer=setTimeout(()=>toast.classList.remove('show'),2600)}
+function chime(){
+  try{
+    audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+    if(audioCtx.state==='suspended')audioCtx.resume();
+    const now=audioCtx.currentTime;
+    [523.25,659.25,783.99,1046.5].forEach((freq,i)=>{
+      const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
+      osc.type='sine';osc.frequency.value=freq;
+      gain.gain.setValueAtTime(.0001,now+i*.14);
+      gain.gain.exponentialRampToValueAtTime(.14,now+i*.14+.025);
+      gain.gain.exponentialRampToValueAtTime(.0001,now+i*.14+.42);
+      osc.connect(gain);gain.connect(audioCtx.destination);osc.start(now+i*.14);osc.stop(now+i*.14+.45);
+    });
+  }catch(e){}
+}
+function confetti(n=65){
+  const colors=['#ffe7a3','#ff72c6','#6df7ff','#b49aff','#ffffff'];
+  for(let i=0;i<n;i++){
+    const el=document.createElement('i');el.className='confetti';
+    el.style.left=Math.random()*100+'vw';el.style.background=colors[Math.floor(Math.random()*colors.length)];
+    el.style.borderRadius=Math.random()>.5?'50%':'2px';
+    el.style.animationDuration=(2.4+Math.random()*3.2)+'s';
+    el.style.animationDelay=(Math.random()*.7)+'s';el.style.transform='rotate('+Math.random()*360+'deg)';
+    document.body.appendChild(el);setTimeout(()=>el.remove(),6500);
+  }
+}
+function speak(text){
+  if(!('speechSynthesis' in window)){popToast('আপনার ব্রাউজারে voice support নেই—তবুও শুভেচ্ছা রইল!');return}
+  window.speechSynthesis.cancel();
+  const utter=new SpeechSynthesisUtterance(text);
+  utter.lang=/[\u0980-\u09FF]/.test(text)?'bn-BD':'en-US';utter.rate=.88;utter.pitch=1.08;
+  const voices=window.speechSynthesis.getVoices();
+  const voice=voices.find(v=>v.lang.toLowerCase().startsWith(utter.lang.slice(0,2)));
+  if(voice)utter.voice=voice;
+  window.speechSynthesis.speak(utter);
+}
+document.getElementById('nextBtn').addEventListener('click',()=>{
+  index=(index+1)%slides.length;
+  title.textContent=slides[index].title;body.textContent=slides[index].text;
+  dots.forEach((d,i)=>d.classList.toggle('active',i===index));
+  chime();confetti(index===4?100:45);
+  document.getElementById('cake').textContent=['🎂','🎁','🤲','🌟','🍰'][index];
+  if(index===4){popToast('ট্রিট কিন্তু পাকা কথা! 😄');speak('Jihan Joy Shuvo, happy birthday! Birthday treat kobe?');}
+  else popToast(['সারপ্রাইজ ১/৫ নয়—এগিয়ে যান!','একটু English wish! 💫','দোয়া ও ভালোবাসা 🤍','আজকের VIP আপনি!'][index-1]||'আরেকটা সারপ্রাইজ! 🎉');
+});
+document.getElementById('soundBtn').addEventListener('click',()=>{
+  chime();confetti(35);
+  speak('Happy birthday, Jihan Joy Shuvo! শুভ জন্মদিন, জিহান জয় শুভ ভাই! আপনার জীবন আনন্দ, সুস্থতা, সাফল্য আর বরকতে ভরে উঠুক। আর ভাই, birthday treat কবে?');
+  popToast('🎶 Birthday wish শুরু হয়েছে!');
+});
+document.getElementById('treatBtn').addEventListener('click',()=>{
+  chime();confetti(80);speak('ভাই, ট্রিট কী দিবেন? কখন দিবেন? আমরা কিন্তু অপেক্ষায় আছি!');
+  popToast('📅 ট্রিটের তারিখ জানিয়ে দিয়েন ভাই! 😎');
+});
+document.addEventListener('click',()=>{if(audioCtx&&audioCtx.state==='suspended')audioCtx.resume()},{once:true});
+</script>
+</body>
+</html>
