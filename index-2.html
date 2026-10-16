@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070615">
+<title>Happy Birthday Jihan Joy</title>
+<style>
+:root{--gold:#ffe6a0;--pink:#ff70d2;--cyan:#6df6ff;--violet:#9d7bff}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif;color:#fff;background:#070615;background-image:radial-gradient(ellipse at 15% 10%,#51246d 0,transparent 38%),radial-gradient(ellipse at 90% 15%,#063c5a 0,transparent 34%),radial-gradient(ellipse at 50% 100%,#38104a 0,transparent 45%)}
+#rain{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.stars{position:fixed;inset:0;pointer-events:none;opacity:.34;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#7dfaff 1px,transparent 1.5px);background-size:77px 77px,133px 133px;background-position:0 0,30px 44px;animation:stars 22s linear infinite}
+@keyframes stars{to{background-position:154px 154px,296px 310px}}
+.app{position:relative;z-index:1;width:100%;height:100dvh;min-height:520px;display:flex;align-items:center;justify-content:center;padding:18px}
+.page{display:none;width:min(760px,100%);max-height:calc(100dvh - 36px);overflow:auto;text-align:center;padding:clamp(20px,5vw,44px) clamp(16px,5vw,40px);border:1px solid #ffffff30;border-radius:30px;background:linear-gradient(145deg,#ffffff15,#ffffff06);box-shadow:0 25px 90px #0007,inset 0 0 35px #a88bff0b;backdrop-filter:blur(14px);animation:arrive .65s cubic-bezier(.2,.8,.2,1) both}
+.page.active{display:block}
+@keyframes arrive{from{opacity:0;transform:scale(.88) translateY(20px);filter:blur(10px)}to{opacity:1;transform:scale(1) translateY(0);filter:blur(0)}}
+.eyebrow{font-size:.76rem;letter-spacing:3px;color:var(--cyan);font-weight:900;margin:0 0 14px}
+.icon{font-size:clamp(3.8rem,13vw,7rem);line-height:1.2;filter:drop-shadow(0 0 20px #ffcf6a80);animation:float 2.4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}
+h1{font-size:clamp(2.5rem,10vw,6rem);line-height:1.02;letter-spacing:-1.5px;margin:15px 0 10px;font-weight:1000;text-shadow:0 0 26px #ff70d255}
+.name{display:block;margin-top:12px;color:var(--gold);font-size:clamp(2.4rem,9vw,5.4rem);text-shadow:0 0 24px #ffdc805e}
+h2{font-size:clamp(1.7rem,6vw,3rem);margin:12px 0;color:var(--gold);line-height:1.2}
+p{font-size:clamp(.98rem,2.8vw,1.14rem);line-height:1.9;color:#e9e4ff;margin:12px auto;max-width:570px}
+.small{font-size:.84rem;color:#bbb4dd}
+.btnrow{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:25px}
+button{font:inherit;font-weight:850;cursor:pointer;border:0;transition:transform .2s,filter .2s}
+button:hover{transform:translateY(-3px);filter:brightness(1.08)}
+button:active{transform:scale(.97)}
+.primary{padding:15px 24px;border-radius:16px;color:#1c1032;background:linear-gradient(110deg,var(--gold),var(--pink) 55%,var(--cyan));box-shadow:0 8px 30px #ff70d238}
+.secondary{padding:14px 20px;border-radius:16px;color:white;border:1px solid #ffffff3b;background:#ffffff0d}
+.counter{display:inline-flex;gap:7px;align-items:center;margin-bottom:17px;padding:7px 13px;border:1px solid #ffffff26;background:#ffffff0a;border-radius:40px;color:#d6cff6;font-size:.8rem}
+.dots{display:flex;justify-content:center;gap:7px;margin:22px 0 0}
+.dot{width:7px;height:7px;border-radius:50%;background:#ffffff40}.dot.on{width:24px;border-radius:8px;background:linear-gradient(90deg,var(--pink),var(--gold))}
+.ring{width:clamp(125px,32vw,175px);aspect-ratio:1;border:1px solid #ffe6a077;border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;position:relative;box-shadow:0 0 42px #ffcf6a24,inset 0 0 28px #ffcf6a18}
+.ring:before,.ring:after{content:"";position:absolute;inset:-11px;border:1px dashed #6df6ff8c;border-radius:50%;animation:spin 17s linear infinite}.ring:after{inset:11px;border-color:#ff70d288;animation-direction:reverse;animation-duration:11s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bigemoji{font-size:clamp(4rem,14vw,6rem);filter:drop-shadow(0 0 18px #ff9ddd77)}
+.treatbox{border:1px solid #ffb8ed5a;border-radius:22px;padding:18px;background:linear-gradient(135deg,#ff70d21a,#6df6ff12);margin-top:18px}
+.footer{position:fixed;bottom:9px;left:0;width:100%;text-align:center;font-size:.7rem;letter-spacing:1px;color:#a7a0c9;pointer-events:none;z-index:1}
+#toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);opacity:0;transition:.3s;z-index:10;background:#fff;color:#211039;border-radius:14px;padding:11px 17px;font-weight:800;max-width:90%;text-align:center;pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-height:650px){.page{padding:18px 16px;max-height:calc(100dvh - 28px)}.icon{font-size:3.5rem}h1{font-size:clamp(2.2rem,8vw,4rem)}.name{font-size:clamp(2.1rem,7vw,3.6rem)}p{line-height:1.65;margin:8px auto}.btnrow{margin-top:16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<canvas id="rain"></canvas><div class="stars"></div>
+<main class="app">
+  <section class="page active" data-page="0">
+    <div class="eyebrow">A SPECIAL SURPRISE FOR YOU</div>
+    <div class="icon">👑</div>
+    <h1>HAPPY<br>BIRTHDAY<span class="name">জিহান জয়</span></h1>
+    <p>প্রিয় বড় ভাই, আজকের দিনটা শুধু আপনার! আপনার জন্য আছে কয়েকটি বিশেষ সারপ্রাইজ—একটার পর একটা খুলে দেখুন। ✨</p>
+    <div class="btnrow"><button class="primary" data-next>🎁 সারপ্রাইজ শুরু করুন</button><button class="secondary" id="welcomeVoice">🔊 জন্মদিনের শুভেচ্ছা শুনুন</button></div>
+    <div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+  </section>
+  <section class="page" data-page="1">
+    <div class="counter">SURPRISE 01 / 05</div><div class="ring"><span class="bigemoji">🎂</span></div>
+    <h2>শুভ জন্মদিন, জিহান জয় ভাই! 🎉</h2>
+    <p>আপনার নতুন বছরটা হোক হাসি, আনন্দ, সুস্থতা আর অসাধারণ সব মুহূর্তে ভরা। সব সময় ভালো থাকুন, নিজের মতো করে উজ্জ্বল হয়ে থাকুন।</p>
+    <div class="btnrow"><button class="primary" data-next>পরের সারপ্রাইজ ✨</button></div>
+    <div class="dots"><span class="dot"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+  </section>
+  <section class="page" data-page="2">
+    <div class="counter">SURPRISE 02 / 05</div><div class="icon">🌟</div>
+    <h2>For You, Big Brother</h2>
+    <p>May your days be bright, your dreams grow bigger, and your life be filled with happiness, success, and unforgettable memories.</p>
+    <p>Keep smiling, keep shining, and enjoy your special day! 💫</p>
+    <div class="btnrow"><button class="primary" data-next>আরও একটি খুলুন 🎁</button></div>
+    <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+  </section>
+  <section class="page" data-page="3">
+    <div class="counter">SURPRISE 03 / 05</div><div class="icon">🤲</div>
+    <h2>আপনার জন্য দোয়া</h2>
+    <p>আল্লাহ আপনার জীবনকে শান্তি, বরকত, সুস্থতা, সম্মান ও হালাল রিজিকে পরিপূর্ণ করে দিন। আপনার ভালো ইচ্ছাগুলো পূরণ হোক। আমিন। 🤍</p>
+    <div class="btnrow"><button class="primary" data-next>পরের পেজ দেখুন 💫</button></div>
+    <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+  </section>
+  <section class="page" data-page="4">
+    <div class="counter">SURPRISE 04 / 05</div><div class="icon">🎆</div>
+    <h2>আজকের VIP আপনি!</h2>
+    <p>আজ সব টেনশন ছুটি নিক, হাসি থাকুক মুখে আর চারপাশ ভরে উঠুক আনন্দে। আপনার জন্মদিন হোক স্মরণীয়! 🎊</p>
+    <div class="btnrow"><button class="primary" data-next>শেষ সারপ্রাইজটা খুলুন 😎</button></div>
+    <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot on"></span><span class="dot"></span></div>
+  </section>
+  <section class="page" data-page="5">
+    <div class="counter">FINAL SURPRISE 🎁</div><div class="icon">🍕</div>
+    <h2>এবার আসল কথা, ভাই! 😏</h2>
+    <div class="treatbox"><p style="font-size:1.25rem;color:#ffe6a0;font-weight:900">Birthday Treat কী দিবেন?</p><p>আর সবচেয়ে জরুরি প্রশ্ন—<b>কখন ট্রিট দিবেন?</b> 😂</p><p>কেক তো কাটলেন, এবার আমাদের পালা! ট্রিটের দিন-তারিখ কিন্তু জানিয়ে দিয়েন, বড় ভাই। 🍰🥤</p></div>
+    <div class="btnrow"><button class="primary" id="celebrate">🎉 আবার সেলিব্রেট করি!</button><button class="secondary" id="voice">🔊 Birthday Wish শুনুন</button></div>
+    <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot on"></span></div>
+  </section>
+</main>
+<button id="soundToggle" aria-label="Sound toggle" style="position:fixed;right:14px;top:14px;z-index:8;border:1px solid #ffffff40;background:#ffffff12;color:#fff;border-radius:30px;padding:10px 13px;backdrop-filter:blur(12px)">🔊 সাউন্ড চালু</button><div class="footer">MADE WITH 💜 FOR JIHAN JOY · Creator: MD Atiqul Islam</div><div id="toast"></div>
+<script>
+const pages=[...document.querySelectorAll('.page')];let current=0,ctx=null,soundOn=true;
+function tone(){
+ if(!soundOn)return;
+ try{
+  ctx=ctx||new(window.AudioContext||window.webkitAudioContext)();
+  if(ctx.state==='suspended')ctx.resume();
+  const t=ctx.currentTime;
+  // Original little birthday fanfare generated in the browser.
+  [523.25,659.25,783.99,1046.5,783.99,1046.5].forEach((f,i)=>{
+   const o=ctx.createOscillator(),g=ctx.createGain();
+   o.type=i%2?'triangle':'sine';o.frequency.value=f;
+   g.gain.setValueAtTime(.0001,t+i*.13);
+   g.gain.exponentialRampToValueAtTime(.10,t+i*.13+.025);
+   g.gain.exponentialRampToValueAtTime(.0001,t+i*.13+.38);
+   o.connect(g);g.connect(ctx.destination);o.start(t+i*.13);o.stop(t+i*.13+.4);
+  });
+ }catch(e){}
+}
+function toast(s){const t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2300)}
+function confetti(n=70){
+ const colors=['#ffe6a0','#ff70d2','#6df6ff','#9d7bff','#fff'];
+ for(let i=0;i<n;i++){
+  const e=document.createElement('i');
+  e.style.cssText=`position:fixed;z-index:5;pointer-events:none;top:-18px;left:${Math.random()*100}vw;width:${5+Math.random()*7}px;height:${8+Math.random()*11}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:${Math.random()>.5?'50%':'2px'};`;
+  document.body.appendChild(e);
+  e.animate([{transform:'translateY(0) rotate(0deg)',opacity:1},{transform:`translate(${Math.random()*100-50}px,110vh) rotate(${Math.random()*900}deg)`,opacity:.12}],{duration:2400+Math.random()*2500,easing:'linear'}).onfinish=()=>e.remove();
+ }
+}
+const spokenPages=[
+ 'Happy birthday, Jihan Joy! শুভ জন্মদিন, জিহান জয় ভাই! আজকের দিনটা শুধু আপনার। সারপ্রাইজ খুলে দেখুন!',
+ 'শুভ জন্মদিন, জিহান জয় ভাই! আপনার নতুন বছরটা হোক হাসি, আনন্দ, সুস্থতা আর অসাধারণ সব মুহূর্তে ভরা। সব সময় ভালো থাকুন।',
+ 'For you, big brother. May your days be bright, your dreams grow bigger, and your life be filled with happiness, success, and unforgettable memories. Happy birthday, Jihan Joy!',
+ 'জিহান জয় ভাই, আল্লাহ আপনার জীবনকে শান্তি, বরকত, সুস্থতা, সম্মান ও হালাল রিজিকে পরিপূর্ণ করে দিন। আপনার ভালো ইচ্ছাগুলো পূরণ হোক। আমিন।',
+ 'আজকের VIP আপনি! আজ সব টেনশন ছুটি নিক, হাসি থাকুক মুখে আর চারপাশ ভরে উঠুক আনন্দে। আপনার জন্মদিন হোক স্মরণীয়!',
+ 'জিহান জয় ভাই, এবার আসল কথা! Birthday treat কী দিবেন? আর কখন ট্রিট দিবেন? আমরা কিন্তু অপেক্ষায় আছি। Happy birthday!'
+];
+function speakText(text){
+ if(!soundOn || !('speechSynthesis' in window))return;
+ try{
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.rate=.9;u.pitch=1.08;u.volume=1;
+  // Keep Bengali text on Bengali voice when available; otherwise use browser default.
+  const voices=window.speechSynthesis.getVoices();
+  const isBangla=/[\u0980-\u09FF]/.test(text);
+  const voice=voices.find(v=>isBangla?v.lang.toLowerCase().startsWith('bn'):v.lang.toLowerCase().startsWith('en'));
+  if(voice){u.voice=voice;u.lang=voice.lang;}else{u.lang=isBangla?'bn-BD':'en-US';}
+  window.speechSynthesis.speak(u);
+ }catch(e){}
+}
+function go(i){
+ if('speechSynthesis'in window)window.speechSynthesis.cancel();
+ pages[current].classList.remove('active');
+ current=i%pages.length;
+ pages[current].classList.remove('active');
+ void pages[current].offsetWidth;
+ pages[current].classList.add('active');
+ tone();confetti(current===5?100:48);
+ // Every surprise-page click reads that page's birthday message aloud.
+ speakText(spokenPages[current]);
+ if(current===5)toast('ট্রিটের কথা কিন্তু ভুলবেন না! 😄');
+}
+document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>go((current+1)%pages.length)));
+document.getElementById('celebrate').addEventListener('click',()=>{go(0);toast('Happy Birthday, Jihan Joy! 🎂')});
+document.getElementById('voice').addEventListener('click',()=>{tone();speakText(spokenPages[5]);toast('🎶 Birthday wish শুরু হয়েছে!')});
+document.getElementById('welcomeVoice').addEventListener('click',()=>{tone();speakText(spokenPages[0]);confetti(40);toast('🎶 Birthday wish শুরু হয়েছে!')});
+document.getElementById('soundToggle').addEventListener('click',()=>{
+ soundOn=!soundOn;
+ const b=document.getElementById('soundToggle');
+ b.textContent=soundOn?'🔊 সাউন্ড চালু':'🔇 সাউন্ড বন্ধ';
+ if(!soundOn && 'speechSynthesis'in window)window.speechSynthesis.cancel();
+ else {tone();speakText(spokenPages[current]);}
+ toast(soundOn?'সাউন্ড ও ভয়েস চালু হয়েছে':'সাউন্ড ও ভয়েস বন্ধ হয়েছে');
+});
+const style=document.createElement('style');style.textContent='@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}';document.head.appendChild(style);
+function go(i){pages[current].classList.remove('active');current=i%pages.length;pages[current].classList.remove('active');void pages[current].offsetWidth;pages[current].classList.add('active');tone();confetti(current===5?100:48);if(current===5)toast('ট্রিটের কথা কিন্তু ভুলবেন না! 😄')}
+document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>go((current+1)%pages.length)));
+document.getElementById('celebrate').addEventListener('click',()=>{go(0);toast('Happy Birthday, Jihan Joy! 🎂')});
+function speak(){tone();if(!('speechSynthesis'in window)){toast('এই ব্রাউজারে ভয়েস সাপোর্ট নেই');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance('Happy birthday, Jihan Joy! শুভ জন্মদিন, জিহান জয় ভাই! আপনার জীবন আনন্দ, সুস্থতা, সাফল্য আর বরকতে ভরে উঠুক। আর ভাই, birthday treat কবে?');u.lang='bn-BD';u.rate=.88;u.pitch=1.08;let vs=speechSynthesis.getVoices();let v=vs.find(x=>x.lang.toLowerCase().startsWith('bn'));if(v)u.voice=v;speechSynthesis.speak(u);toast('🎶 Birthday wish শুরু হয়েছে!')}
+document.getElementById('voice').addEventListener('click',speak);
+const canvas=document.getElementById('rain'),c=canvas.getContext('2d');let w,h,drops=[];
+function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';c.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);drops=Array.from({length:Math.min(38,Math.floor(innerWidth/11))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:.35+Math.random()*1.1,r:7+Math.random()*15,a:.07+Math.random()*.14,rot:Math.random()*6.28}))}
+function draw(){c.clearRect(0,0,innerWidth,innerHeight);for(let d of drops){d.y+=d.s*1.5;d.x+=Math.sin(d.y*.008)*.25;if(d.y>innerHeight+35){d.y=-30;d.x=Math.random()*innerWidth}c.save();c.translate(d.x,d.y);c.rotate(d.rot);c.globalAlpha=d.a;c.filter='blur(2.5px)';c.font=`${d.r}px serif`;c.fillText('🎂',0,0);c.restore()}requestAnimationFrame(draw)}
+addEventListener('resize',resize);resize();draw();
+</script>
+</body>
+</html>
